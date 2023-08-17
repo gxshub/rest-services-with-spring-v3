@@ -30,8 +30,14 @@ public class BookSpringApplication {
 			entry.addAvailableLibrary(2500L);
 			entry.addAvailableLibrary(2522L);
 			bookRepository.save(entry);
-			//System.out.println(bookRepository.findById("0-684-84328-5").orElseThrow().getAvailableLibraries());
 			System.out.println(bookRepository.findById("0-684-84328-5").orElseThrow());
+
+			Book entry1 = new Book();
+			entry1.setIsbn("93-86954-21-4");
+			entry1.setTitle("Domain Drive Design");
+			entry1.addAvailableLibrary(2522L);
+			bookRepository.save(entry1);
+			System.out.println(bookRepository.findById("93-86954-21-4").orElseThrow());
 		};
 	}
 
