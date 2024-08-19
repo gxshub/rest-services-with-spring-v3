@@ -41,4 +41,4 @@ domain classes to the external world.
 
 
 ### _TODO_
-_Add an Application Service Layer and DTO classes to the **Library Service**._
+_(i) Add an Application Service Layer. (ii) Implement a DTO class for one method in the **Library Service**. (iii) Consider a use case “For all books by library”. Implement this use case by using the `RestTemplate` API._
