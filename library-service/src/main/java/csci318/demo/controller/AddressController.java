@@ -1,5 +1,6 @@
 package csci318.demo.controller;
 
+import csci318.demo.model.Library;
 import csci318.demo.repository.AddressRepository;
 import csci318.demo.model.Address;
 import org.springframework.web.bind.annotation.*;
@@ -29,6 +30,13 @@ public class AddressController {
     @PostMapping("/addresses")
     Address createAddress(@RequestBody Address newAddress) {
         return addressRepository.save(newAddress);
+    }
+
+    @GetMapping("/addresses/{id}/library")
+    Library findLibraryByAddress(@PathVariable Long id) {
+        return addressRepository.findById(id)
+                .orElseThrow(RuntimeException::new)
+                .getLibrary();
     }
 
 }
