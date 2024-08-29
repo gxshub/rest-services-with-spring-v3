@@ -6,7 +6,7 @@ The following two lines are added to `src/main/resources/application.properties`
 spring.h2.console.enabled=true
 spring.datasource.url=jdbc:h2:mem:testdb
 ```
-The console [http://localhost:8082/h2-console/](http://localhost:8082/h2-console/).
+The console [http://localhost:8081/h2-console/](http://localhost:8082/h2-console/).
 To log on, change the value in the `JDBC URL` entry to
 `jdbc:h2:mem:testdb`.
 
